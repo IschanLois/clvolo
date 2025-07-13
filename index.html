@@ -12,8 +12,9 @@
   <title>clvolo</title>
 </head>
 <body>
+  <canvas id="canvas"></canvas>
   <header>
-    <div>
+    <div class="container-space">
       <nav class="header-nav">
         <a href=# class="logo">clvolo</a>
         <ul class="header-links">
@@ -27,9 +28,9 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero container-space">
       <div class="hero__content">
-        <img class="hero__ascii-art" src="ascii-art.svg" />
+        <img class="hero__ascii-art" src="ascii-art.svg" alt="christian portrait" />
         <h1 class="hero__title">Hi, I'm <span class="hero__title-name">Christian</span></h1>
         <p class="hero__description">Just a software engineer, living the dream one line of code (and coffee) at a time.</p>
         <a href="#experience" class="hero__action">
@@ -40,14 +41,27 @@
       </div>
     </section>
 
-    <section id="experience" class="experience">
+    <section id="experience" class="experience container-space">
       <h3>Experience</h3>
-      <article>
-        <h4>SiteMinder</h4>
-        <p>Software Engineer &lpar;2023 - present&rpar;</p>
+
+      <article class="experience__item">
+        <div>
+          <h4>Room Pricing Recommendation System</h4>
+          <p>SiteMinder &lpar;2023 - present&rpar;</p>
+          <p>Software Engineer</p>
+          <img
+            src="dynamic-pricing.PNG"
+            alt="hotel pricing recommendation system"
+            class="experience__item-img"
+          />
+        </div>
+        <div>
+          <p>Develops </p>
+        </div>
       </article>
     </section>
   </main>
-  
+
+  <script src="index.js"></script>
 </body>
 </html>

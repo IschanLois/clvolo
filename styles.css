@@ -58,6 +58,13 @@ a {
   color: white;
 }
 
+#canvas {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
 .logo {
   font-weight: 600;
 }
@@ -164,6 +171,30 @@ a {
   opacity: 0.7;
 }
 
+.experience__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10vw;
+}
+
+.experience__item-img {
+  position: relative;
+  width: 500px;
+}
+
+.experience__item-img::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-color: var(--color-text-terminal-green);
+  box-shadow: 0 0 10px var(--color-box-shadow);
+}
+
 @media screen and (max-width: 768px) {
   .hero__title {
     font-size: 3rem;
@@ -177,7 +208,7 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  .header-nav {
+  .container-space {
     padding-left: 8vw;
     padding-right: 8vw;
   }
