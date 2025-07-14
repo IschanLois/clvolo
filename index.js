@@ -8,7 +8,7 @@ const points = []
 const numPoints = 200
 const mouse = { x: null, y: null }
 
-function createPoints() {
+const createPoints = () => {
   for (let i = 0; i < numPoints; i++) {
     points.push({
       x: Math.random() * canvas.width,
@@ -20,7 +20,7 @@ function createPoints() {
   }
 }
 
-function drawPoints() {
+const drawPoints = () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height)
   points.forEach((point) => {
     const distance = Math.hypot(mouse.x - point.x, mouse.y - point.y)
@@ -36,7 +36,7 @@ function drawPoints() {
   })
 }
 
-function updatePoints() {
+const updatePoints = () => {
   points.forEach((point) => {
     point.x += point.dx
     point.y += point.dy
@@ -46,23 +46,33 @@ function updatePoints() {
   })
 }
 
-function animate() {
+const animate = () => {
   drawPoints()
   updatePoints()
   requestAnimationFrame(animate)
 }
 
 window.addEventListener('mousemove', (e) => {
+  e.preventDefault()
   mouse.x = e.clientX
   mouse.y = e.clientY
 
   console.log(mouse.x, mouse.y)
 })
 
-window.addEventListener('mouseleave', () => {
-  mouse.x = null
-  mouse.y = null
-})
-
 createPoints()
 animate()
+
+const header = document.querySelector('header')
+
+const addHeaderBackground = (e) => {
+  e.preventDefault()
+
+  if (document.documentElement.scrollTop !== 0) {
+    header.classList.add('transparent')
+  } else {
+    header.classList.remove('transparent')
+  }
+}
+
+window.addEventListener('scroll', addHeaderBackground)

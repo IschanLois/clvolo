@@ -20,7 +20,7 @@
         <ul class="header-links">
           <li><a href="#experience">Experiences</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#">Projects</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
@@ -44,7 +44,7 @@
     <section id="experience" class="experience container-space">
       <h2>Experiences</h2>
 
-      <article class="experience__item">
+      <article class="experience__item dynamic-pricing">
         <div class="experience__item-intro">
           <h3>Room Pricing Recommendation System</h3>
           <p>SiteMinder &lpar;2023 - present&rpar;</p>
@@ -61,8 +61,6 @@
               class="experience__item-img"
             />
           </div>
-        </div>
-        <div>
           <p>Automates the adjustment of hotel room pricing based on market demand data, boosting the revenue of 100+ hotels.</p>
           <p>Contributions:</p>
           <ul class="experience__item-contribution-list">
@@ -71,23 +69,11 @@
             <li>Develops UI components.</li>
             <li>Active participation in building both UI and technical requirements.</li>
           </ul>
-          <p class="experience__low-emphasis-text">AWS, Node.js, Vue.js, TypeScript, Jest, and Cypress</p>
+          <p class="experience__low-emphasis-text">AWS, Node.js, Vue.js, TypeScript, Redis, Jest, and Cypress</p>
         </div>
       </article>
 
       <article class="experience__item">
-        <div>
-          <p>Provides 40,000+ hoteliers with a dashboard that monitors their performance based on key hospitality metrics. This also provides them with a comparison against their immediate market.</p>
-          <p>Contributions:</p>
-          <ul class="experience__item-contribution-list">
-            <li>Maintains the infrastructure for the system.</li>
-            <li>Writes SQL queries for aggregating terabytes of relational data.</li>
-            <li>Consolidates data from microservices through jobs and direct API access.</li>
-            <li>Develops UI components.</li>
-            <li>Active participation in building both UI and technical requirements.</li>
-          </ul>
-          <p class="experience__low-emphasis-text">AWS, Node.js, Vue.js, TypeScript, Jest. Postgres, and Databricks</p>
-        </div>
         <div class="experience__item-intro">
           <h3>Hotel Metrics Dashboard</h3>
           <p>SiteMinder &lpar;2023 - present&rpar;</p>
@@ -104,6 +90,15 @@
               class="experience__item-img"
             />
           </div>
+          <p>Provides 40,000+ hoteliers with a dashboard that monitors their performance based on key hospitality metrics.</p>
+          <p>Contributions:</p>
+          <ul class="experience__item-contribution-list">
+            <li>Writes SQL queries for aggregating terabytes of relational data.</li>
+            <li>Consolidates data from microservices through jobs and direct API access.</li>
+            <li>Develops UI components.</li>
+            <li>Active participation in building both UI and technical requirements.</li>
+          </ul>
+          <p class="experience__low-emphasis-text">AWS, Node.js, Vue.js, TypeScript, Jest. Postgres, Redis, and Databricks</p>
         </div>
       </article>
     </section>
@@ -111,17 +106,93 @@
     <section id="about" class="about container-space">
       <h2>About me</h2>
       <p>
-        I'm a software engineer with a deep passion of computers. I love to study how a computer works fundamentally such as its operating systems, networking, and architecture.
-        I use my passion to learn to build software that solves real-world problems. I have expertise in full-stack development, with a focus on building scalable 
-        and maintainable applications.
+        I'm a software engineer with a deep passion for computers. I love studying how computers work at a fundamental level,
+        including operating systems, networking, and architecture. I use this passion to build software that solves real-world problems.
+        I have expertise in full-stack development, with a focus on creating scalable and maintainable applications.
+        From time to time, I also work on and contribute to open-source projects.
       </p>
 
       <section class="about__certifiations">
-        <article class="about__certification">
+        <h3>Certifications</h3>
+        
+        <div class="about__certification-list">
+          <article class="about__certification">
+            <a href="https://www.credly.com/badges/0995a2f7-3b21-4c39-8962-2918b92073a4/public_url" target="_blank">
+              <img
+                src="/assets/cert-solutions-archi.png"
+                alt="Solutions architect certification"
+                class="about__certification-img"
+              />
+            </a>
+            <p>AWS SAA-C03</p>
+          </article>
+          <article class="about__certification">
+            <a href="https://www.credly.com/badges/f4ba0572-c6d2-4513-bbcb-3a43f85bbf3d/public_url" target="_blank">
+              <img
+                src="/assets/cert-cloud-practioner.png"
+                alt="Cloud practitioner certification"
+                class="about__certification-img"
+              />
+            </a>
+            <p>AWS CLF-C03</p>
+          </article>
+          <article class="about__certification">
+            <a href="https://www.credly.com/badges/322683c7-ccb9-498a-b573-9054c32a7cba/public_url" target="_blank">
+              <img
+                src="/assets/cert-node.png"
+                alt="Node.js certification"
+                class="about__certification-img"
+              />
+            </a>
+            <p>Node.js Developer</p>
+          </article>
+        </div>
+      </section>
 
-        </article>
+      <section class="about__expertise">
+        <h3>Technologies & Expertise</h3>
+        <div class="about__expertise-collection">
+          <article class="about__expertise-item technologies">
+            <h4>Technologies</h4>
+            <ul>
+              <li>JavaScript, Typescript</li>
+              <li>Node.js</li>
+              <li>AWS</li>
+              <li>Frontend frameworks &lpar;React.js, Vue.js&rpar;</li>
+              <li>Version control, Git</li>
+              <li>Relational databases &lpar;Postgres, MySQL&rpar;</li>
+              <li>NoSQL &lpar;MongoDB&rpar;</li>
+            </ul>
+          </article>
+          <article class="about__expertise-item expertise">
+            <h4>Expertise</h4>
+            <ul>
+              <li>Infrastructure management</li>
+              <li>API development &lpar;REST, GraphQL, WebSockets&rpar;</li>
+              <li>Building layer 7 applications</li>
+              <li>Frontend development</li>
+              <li>Testing &lpar;API, Frontend&rpar;</li>
+            </ul>
+          </article>
+        </div>
       </section>
     </section>
+
+    <section id="projects" class="projects container-space">
+      <h2>Projects</h2>
+      <article class="project__item json-rpc">
+        <h3>json-rpc-client-gen</h3>
+        <img
+          src="/assets/project-json-rpc.png"
+          alt="JSON-RPC client stub generator"
+          class="project__item-img"
+        />
+        <p class="project__item-description">
+          A Node.js TypeScript library that generates <a href="https://www.jsonrpc.org/specification" target="_blank">JSON-RPC</a> client stub from a
+          JSON-RPC server specification. Built on top of TCP/IP, it abstracts the complexities of sending and parsing JSON-RPC messages over a network, making
+          clients-server as easy as calling a local function.
+        </p>
+      </article>
   </main>
 
   <script src="index.js"></script>
