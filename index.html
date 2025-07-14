@@ -18,8 +18,8 @@
       <nav class="header-nav">
         <a href=# class="logo">clvolo</a>
         <ul class="header-links">
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="#experience">Experiences</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#">Projects</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
@@ -30,7 +30,7 @@
   <main>
     <section class="hero container-space">
       <div class="hero__content">
-        <img class="hero__ascii-art" src="ascii-art.svg" alt="christian portrait" />
+        <img class="hero__ascii-art" src="/assets/ascii-art.svg" alt="christian portrait" />
         <h1 class="hero__title">Hi, I'm <span class="hero__title-name">Christian</span></h1>
         <p class="hero__description">Just a software engineer, living the dream one line of code (and coffee) at a time.</p>
         <a href="#experience" class="hero__action">
@@ -42,23 +42,85 @@
     </section>
 
     <section id="experience" class="experience container-space">
-      <h3>Experience</h3>
+      <h2>Experiences</h2>
+
+      <article class="experience__item">
+        <div class="experience__item-intro">
+          <h3>Room Pricing Recommendation System</h3>
+          <p>SiteMinder &lpar;2023 - present&rpar;</p>
+          <p class="experience__low-emphasis-text">Software Engineer</p>
+          <div class="experience__item-img-container">
+            <div class="experience_item-img-top-bar">
+              <span class="experience__item-img-top-bar-circle red"></span>
+              <span class="experience__item-img-top-bar-circle yellow"></span>
+              <span class="experience__item-img-top-bar-circle green"></span>
+            </div>
+            <img
+              src="/assets/pricing-adjustment.png"
+              alt="hotel pricing recommendation system"
+              class="experience__item-img"
+            />
+          </div>
+        </div>
+        <div>
+          <p>Automates the adjustment of hotel room pricing based on market demand data, boosting the revenue of 100+ hotels.</p>
+          <p>Contributions:</p>
+          <ul class="experience__item-contribution-list">
+            <li>Provisions infrastructure for monitoring realtime room changes updates.</li>
+            <li>Consolidates data from different microservices.</li>
+            <li>Develops UI components.</li>
+            <li>Active participation in building both UI and technical requirements.</li>
+          </ul>
+          <p class="experience__low-emphasis-text">AWS, Node.js, Vue.js, TypeScript, Jest, and Cypress</p>
+        </div>
+      </article>
 
       <article class="experience__item">
         <div>
-          <h4>Room Pricing Recommendation System</h4>
-          <p>SiteMinder &lpar;2023 - present&rpar;</p>
-          <p>Software Engineer</p>
-          <img
-            src="dynamic-pricing.PNG"
-            alt="hotel pricing recommendation system"
-            class="experience__item-img"
-          />
+          <p>Provides 40,000+ hoteliers with a dashboard that monitors their performance based on key hospitality metrics. This also provides them with a comparison against their immediate market.</p>
+          <p>Contributions:</p>
+          <ul class="experience__item-contribution-list">
+            <li>Maintains the infrastructure for the system.</li>
+            <li>Writes SQL queries for aggregating terabytes of relational data.</li>
+            <li>Consolidates data from microservices through jobs and direct API access.</li>
+            <li>Develops UI components.</li>
+            <li>Active participation in building both UI and technical requirements.</li>
+          </ul>
+          <p class="experience__low-emphasis-text">AWS, Node.js, Vue.js, TypeScript, Jest. Postgres, and Databricks</p>
         </div>
-        <div>
-          <p>Develops </p>
+        <div class="experience__item-intro">
+          <h3>Hotel Metrics Dashboard</h3>
+          <p>SiteMinder &lpar;2023 - present&rpar;</p>
+          <p class="experience__low-emphasis-text">Software Engineer</p>
+          <div class="experience__item-img-container">
+            <div class="experience_item-img-top-bar">
+              <span class="experience__item-img-top-bar-circle red"></span>
+              <span class="experience__item-img-top-bar-circle yellow"></span>
+              <span class="experience__item-img-top-bar-circle green"></span>
+            </div>
+            <img
+              src="/assets/dashboard.png"
+              alt="hotel pricing recommendation system"
+              class="experience__item-img"
+            />
+          </div>
         </div>
       </article>
+    </section>
+
+    <section id="about" class="about container-space">
+      <h2>About me</h2>
+      <p>
+        I'm a software engineer with a deep passion of computers. I love to study how a computer works fundamentally such as its operating systems, networking, and architecture.
+        I use my passion to learn to build software that solves real-world problems. I have expertise in full-stack development, with a focus on building scalable 
+        and maintainable applications.
+      </p>
+
+      <section class="about__certifiations">
+        <article class="about__certification">
+
+        </article>
+      </section>
     </section>
   </main>
 
