@@ -30,7 +30,7 @@
   <main>
     <section class="hero container-space">
       <div class="hero__content">
-        <img class="hero__ascii-art" src="/assets/ascii-art.svg" alt="christian portrait" />
+        <img class="hero__ascii-art" width="300px" height="297.02px;" src="/assets/ascii-art.svg" alt="christian portrait" />
         <h1 class="hero__title">Hi, I'm <span class="hero__title-name">Christian</span></h1>
         <p class="hero__description">Just a software engineer, living the dream one line of code (and coffee) at a time.</p>
         <a href="#experience" class="hero__action">
@@ -61,7 +61,7 @@
               class="experience__item-img"
             />
           </div>
-          <p>Automates the adjustment of hotel room pricing based on market demand data, boosting the revenue of 100+ hotels.</p>
+          <p>Automates the adjustment of hotel room pricing based on market demand data, boosting the revenue of 100+ project pioneer hotels.</p>
           <p>Contributions:</p>
           <ul class="experience__item-contribution-list">
             <li>Provisions infrastructure for monitoring realtime room changes updates.</li>
@@ -103,95 +103,128 @@
       </article>
     </section>
 
-    <section id="about" class="about container-space">
-      <h2>About me</h2>
-      <p>
-        I'm a software engineer with a deep passion for computers. I love studying how computers work at a fundamental level,
-        including operating systems, networking, and architecture. I use this passion to build software that solves real-world problems.
-        I have expertise in full-stack development, with a focus on creating scalable and maintainable applications.
-        From time to time, I also work on and contribute to open-source projects.
-      </p>
-
-      <section class="about__certifiations">
-        <h3>Certifications</h3>
+    <section id="about" class="about">
+      <div class="about__container  container-space">
+        <h2>About me</h2>
+        <p>
+          I'm a software engineer with a deep passion for computers. I love studying how computers work at a fundamental level,
+          including operating systems, networking, and architecture. I use this passion to build software that solves real-world problems.
+          I have expertise in full-stack development, with a focus on creating scalable and maintainable applications.
+          From time to time, I also work on and contribute to open-source projects.
+        </p>
+        <section class="about__certifiations">
+          <h3>Certifications</h3>
         
-        <div class="about__certification-list">
-          <article class="about__certification">
-            <a href="https://www.credly.com/badges/0995a2f7-3b21-4c39-8962-2918b92073a4/public_url" target="_blank">
-              <img
-                src="/assets/cert-solutions-archi.png"
-                alt="Solutions architect certification"
-                class="about__certification-img"
-              />
-            </a>
-            <p>AWS SAA-C03</p>
-          </article>
-          <article class="about__certification">
-            <a href="https://www.credly.com/badges/f4ba0572-c6d2-4513-bbcb-3a43f85bbf3d/public_url" target="_blank">
-              <img
-                src="/assets/cert-cloud-practioner.png"
-                alt="Cloud practitioner certification"
-                class="about__certification-img"
-              />
-            </a>
-            <p>AWS CLF-C03</p>
-          </article>
-          <article class="about__certification">
-            <a href="https://www.credly.com/badges/322683c7-ccb9-498a-b573-9054c32a7cba/public_url" target="_blank">
-              <img
-                src="/assets/cert-node.png"
-                alt="Node.js certification"
-                class="about__certification-img"
-              />
-            </a>
-            <p>Node.js Developer</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="about__expertise">
-        <h3>Technologies & Expertise</h3>
-        <div class="about__expertise-collection">
-          <article class="about__expertise-item technologies">
-            <h4>Technologies</h4>
-            <ul>
-              <li>JavaScript, Typescript</li>
-              <li>Node.js</li>
-              <li>AWS</li>
-              <li>Frontend frameworks &lpar;React.js, Vue.js&rpar;</li>
-              <li>Version control, Git</li>
-              <li>Relational databases &lpar;Postgres, MySQL&rpar;</li>
-              <li>NoSQL &lpar;MongoDB&rpar;</li>
-            </ul>
-          </article>
-          <article class="about__expertise-item expertise">
-            <h4>Expertise</h4>
-            <ul>
-              <li>Infrastructure management</li>
-              <li>API development &lpar;REST, GraphQL, WebSockets&rpar;</li>
-              <li>Building layer 7 applications</li>
-              <li>Frontend development</li>
-              <li>Testing &lpar;API, Frontend&rpar;</li>
-            </ul>
-          </article>
-        </div>
-      </section>
+          <div class="about__certification-list">
+            <article class="about__certification">
+              <a href="https://www.credly.com/badges/0995a2f7-3b21-4c39-8962-2918b92073a4/public_url" target="_blank">
+                <figure>
+                  <img
+                    src="/assets/cert-solutions-archi.png"
+                    alt="Solutions architect certification"
+                    class="about__certification-img"
+                  />
+                
+                  <figcaption>
+                    AWS SAA-C03
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+            <article class="about__certification">
+              <a href="https://www.credly.com/badges/f4ba0572-c6d2-4513-bbcb-3a43f85bbf3d/public_url" target="_blank">
+                <figure>
+                  <img
+                    src="/assets/cert-cloud-practioner.png"
+                    alt="Cloud practitioner certification"
+                    class="about__certification-img"
+                  />
+                  <figcaption>AWS CLF-C03</figcaption>
+                </figure>
+              </a>
+            </article>
+            <article class="about__certification">
+              <a href="https://www.credly.com/badges/322683c7-ccb9-498a-b573-9054c32a7cba/public_url" target="_blank">
+                <figure>
+                  <img
+                    src="/assets/cert-node.png"
+                    alt="Node.js certification"
+                    class="about__certification-img"
+                  />
+                  <figcaption>Node.js Developer</figcaption>
+                </figure>
+              </a>
+            </article>
+          </div>
+        </section>
+        <section class="about__expertise">
+          <h3>Technologies & Expertise</h3>
+          <div class="about__expertise-collection">
+            <article class="about__expertise-item technologies">
+              <h4>Technologies</h4>
+              <ul>
+                <li>JavaScript, Typescript</li>
+                <li>Node.js</li>
+                <li>AWS</li>
+                <li>Frontend frameworks &lpar;React.js, Vue.js&rpar;</li>
+                <li>Version control, Git</li>
+                <li>Relational databases &lpar;Postgres, MySQL&rpar;</li>
+                <li>NoSQL &lpar;MongoDB&rpar;</li>
+              </ul>
+            </article>
+            <article class="about__expertise-item expertise">
+              <h4>Expertise</h4>
+              <ul>
+                <li>Infrastructure management</li>
+                <li>API development &lpar;REST, GraphQL, WebSockets&rpar;</li>
+                <li>Building layer 7 applications</li>
+                <li>Frontend development</li>
+                <li>Testing &lpar;API, Frontend&rpar;</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </div>
     </section>
 
     <section id="projects" class="projects container-space">
       <h2>Projects</h2>
+
       <article class="project__item json-rpc">
         <h3>json-rpc-client-gen</h3>
+        <p class="project__item-description">
+          A Node.js TypeScript library that generates <a href="https://www.jsonrpc.org/specification" target="_blank">JSON-RPC</a> client stub from a
+          JSON-RPC server specification. Built on top of TCP/IP, it abstracts the complexities of sending and parsing JSON-RPC messages over a network, making
+          client-server as easy as calling a local function. Currently it has a total of 300+ downloads on NPM.
+        </p>
         <img
           src="/assets/project-json-rpc.png"
           alt="JSON-RPC client stub generator"
           class="project__item-img"
         />
+        <div class="project__item-links">
+          <a href="https://github.com/IschanLois/json-rpc-client-gen" target="_blank">GitHub</a>
+          <a href="https://www.npmjs.com/package/json-rpc-client-gen" target="_blank">NPM</a>
+        </div>
+        <p class="experience__low-emphasis-text">Node.js, TypeScript, JavaScript, and ShellScript</p>
+      </article>
+
+      <article class="project__item leetcode">
+        <h3>interactive-cli-leetcode-solutions</h3>
         <p class="project__item-description">
-          A Node.js TypeScript library that generates <a href="https://www.jsonrpc.org/specification" target="_blank">JSON-RPC</a> client stub from a
-          JSON-RPC server specification. Built on top of TCP/IP, it abstracts the complexities of sending and parsing JSON-RPC messages over a network, making
-          clients-server as easy as calling a local function.
+          A Node.js TypeScript library that that reads and parses leetcode solutions from a local directory and generates an interactive CLI
+          that. It's designed to help compile solutions and review them in a more interactive way.
         </p>
+        <img
+          src="/assets/project-leetcode.png"
+          alt="JSON-RPC client stub generator"
+          class="project__item-img"
+        />
+        <div class="project__item-links">
+          <a href="https://github.com/IschanLois/interactive-cli-leetcode-solutions" target="_blank">GitHub</a>
+          <a href="https://www.npmjs.com/package/interactive-cli-leetcode-solutions" target="_blank">NPM</a>
+        </div>
+        <p class="experience__low-emphasis-text">Node.js, TypeScript, and Jest</p>
       </article>
   </main>
 
