@@ -54,6 +54,7 @@ header {
   position: fixed;
   width: 100vw;
   transition: 0.3s;
+  z-index: 1;
 }
 
 header.transparent {
@@ -181,7 +182,6 @@ ul li {
   height: 100vh;
   padding: 20px;
   background-color: var(--color-top-bar-gray);
-  box-shadow: 2px 0px 5px rgba(0,0,0,0.5);
 }
 
 .side-nav.is-active {
@@ -189,11 +189,11 @@ ul li {
 }
 
 .side-nav__links li {
-  padding: 10px 0 10px 0;
   border-bottom: 1px solid white;
 }
 
 .side-nav__links li a {
+  padding: 10px 0 10px 0;
   display: inline-block;
   width: 100%;
 }
@@ -203,6 +203,7 @@ ul li {
 }
 
 .hero {
+  padding: 0;
   display: flex;
   min-height: 100vh;
   align-items: center;
@@ -462,17 +463,6 @@ ul li {
   font-size: 0.875rem;
 }
 
-@media screen and (min-width: 768px) {
-  .container-space {
-    padding-left: 8vw;
-    padding-right: 8vw;
-  }
-
-  .hide-on-desktop {
-    display: none;
-  }
-}
-
 @media screen and (max-width: 768px) {
   body.disabled {
     overflow-y: hidden;
@@ -504,8 +494,19 @@ ul li {
   }
 }
 
+@media screen and (min-width: 769px) {
+  .container-space {
+    padding-left: 8vw;
+    padding-right: 8vw;
+  }
+
+  .hide-on-desktop {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 560px) {
   .hero__title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }

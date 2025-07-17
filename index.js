@@ -79,13 +79,31 @@ const menuButton = document.querySelector('.menu')
 const sideNav = document.querySelector('.side-nav')
 const body = document.querySelector('body')
 const overlay = document.getElementById('overlay')
-const sideNavLink = document.querySelector('.side-nav__links')
+const sideNavLinks = document.querySelector('.side-nav__links')
 
-const toggleMenu = (e) => {
-  sideNav.classList.toggle('active')
-  body.classList.toggle('disabled')
-  overlay.classList.toggle('active')
+let isSideNavOpen = false
+
+const openMenu = (e) => {
+  isSideNavOpen = !isSideNavOpen
+  sideNav.classList.add('active')
+  body.classList.add('disabled')
+  overlay.classList.add('active')
 }
 
-menuButton.addEventListener('click', toggleMenu)
-sideNavLink.addEventListener('click', toggleMenu)
+const closeMenu = () => {
+  sideNav.classList.remove('active')
+  body.classList.remove('disabled')
+  overlay.classList.remove('active')
+
+  sideNavLinks.removeEventListener('click', closeMenu)
+  window.removeEventListener('click', closeMenu)
+}
+
+menuButton.addEventListener('click', (e) => {
+  openMenu(e)
+
+  e.stopImmediatePropagation()
+
+  sideNavLinks.addEventListener('click', closeMenu)
+  window.addEventListener('click', closeMenu)
+})
