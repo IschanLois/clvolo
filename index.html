@@ -13,11 +13,21 @@
 </head>
 <body>
   <canvas id="canvas"></canvas>
+  <div id="overlay"></div>
   <header>
     <div class="container-space">
       <nav class="header-nav">
         <a href=# class="logo">clvolo</a>
-        <ul class="header-links">
+        <ul class="header-links hide-on-desktop menu">
+          <li>
+            <div class="menu-toggle">
+              <div class="menu-toggle__icon"></div>
+              <div class="menu-toggle__icon"></div>
+              <div class="menu-toggle__icon"></div>
+            </div>
+          </li>
+        </ul>
+        <ul class="header-links hide-on-medium">
           <li><a href="#experience">Experiences</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
@@ -26,6 +36,15 @@
       </nav>
     </div>
   </header>
+
+  <nav class="side-nav">
+    <ul class="side-nav__links">
+      <li><a href="#experience">Experiences</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
   <main>
     <section class="hero container-space">

@@ -2,7 +2,7 @@
   --color-text-terminal-green: #00f500;
   --color-box-shadow: #111111;
   --color-black-background: #1b1a1a;
-  --color-tep-bar-gray: #726f6f;
+  --color-top-bar-gray: #726f6f;
 }
 
 @keyframes typing {
@@ -53,8 +53,7 @@ html {
 header {
   position: fixed;
   width: 100vw;
-  z-index: 1;
-  transition: 0.4s;
+  transition: 0.3s;
 }
 
 header.transparent {
@@ -85,6 +84,14 @@ section h2 {
   font-size: 2rem;
 }
 
+ul {
+  padding-inline-start: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
 #canvas {
   position: fixed;
   width: 100vw;
@@ -92,8 +99,18 @@ section h2 {
   z-index: -1;
 }
 
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
 .container-space {
-  width: 100%;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -112,7 +129,6 @@ section h2 {
 .header-links {
   display: flex;
   gap: 30px;
-  list-style: none;
 }
 
 .header-links li a {
@@ -137,6 +153,53 @@ section h2 {
 
 .header-links li a:hover::after {
   width: 100%;
+}
+
+.menu {
+  cursor: pointer;
+  transition: opacity 0.1s ease;
+}
+
+.menu:hover {
+  opacity: 0.7;
+}
+
+.menu-toggle__icon {
+  width: 30px;
+  height: 3px;
+  margin-bottom: 5px;
+  border-radius: 1px;
+  background-color: white;
+}
+
+.side-nav {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  right: 0;
+  width: 50vw;
+  height: 100vh;
+  padding: 20px;
+  background-color: var(--color-top-bar-gray);
+  box-shadow: 2px 0px 5px rgba(0,0,0,0.5);
+}
+
+.side-nav.is-active {
+  display: block;
+}
+
+.side-nav__links li {
+  padding: 10px 0 10px 0;
+  border-bottom: 1px solid white;
+}
+
+.side-nav__links li a {
+  display: inline-block;
+  width: 100%;
+}
+
+.side-nav__links li:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .hero {
@@ -169,7 +232,7 @@ section h2 {
   overflow: hidden;
   margin: 0;
   text-align: center;
-  animation: typing 1s steps(30, end);
+  animation: typing 1s -tops(30, end);
   font-size: 4rem;
 }
 
@@ -216,7 +279,7 @@ section h2 {
   width: 100%;
   height: 20px;
   border-radius: 5px 5px 0 0;
-  background-color: var(--color-tep-bar-gray);
+  background-color: var(--color-top-bar-gray);
 }
 
 .experience__item-img-top-bar-circle {
@@ -245,10 +308,6 @@ section h2 {
   border-radius: 0 0 5px 5px;
 }
 
-.experience__item-contribution-list li {
-  list-style: none;
-}
-
 .experience__item-contribution-list li::before {
   content: '>';
   color: var(--color-text-terminal-green);
@@ -264,7 +323,6 @@ section h2 {
   border-radius: 5px;
   box-shadow: 5px 5px 5px var(--color-box-shadow);
   padding: 5px;
-  width: 100%;
 }
 
 .about__icons {
@@ -280,7 +338,7 @@ section h2 {
   color: black;
   padding: 5px;
   gap: 2px;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .about__icon:hover {
@@ -319,14 +377,6 @@ section h2 {
 .about__expertise-item {
   border-radius: 10px;
   padding: 10px;
-}
-
-.about__expertise-item ul {
-  padding-inline-start: 0;
-}
-
-.about__expertise-item ul li {
-  list-style: none;
 }
 
 .about__expertise-item ul li::before {
@@ -389,7 +439,6 @@ section h2 {
 }
 
 .contact__container {
-  width: 100%;
   background-color: rgb(256, 256, 256, 0.1);
   border-radius: 5px;
   box-shadow: 5px 5px 5px var(--color-box-shadow);
@@ -403,7 +452,7 @@ section h2 {
 
 .footer {
   text-align: center;
-  border-top: 1px solid var(--color-tep-bar-gray);
+  border-top: 1px solid var(--color-top-bar-gray);
   padding: 20px 0;
 }
 
@@ -413,7 +462,39 @@ section h2 {
   font-size: 0.875rem;
 }
 
+@media screen and (min-width: 768px) {
+  .container-space {
+    padding-left: 8vw;
+    padding-right: 8vw;
+  }
+
+  .hide-on-desktop {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 768px) {
+  body.disabled {
+    overflow-y: hidden;
+  }
+
+  .side-nav.active {
+    display: block;
+  }
+
+  #overlay.active {
+    display: block;
+  }
+
+  .container-space {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+
+  .hide-on-medium {
+    display: none;
+  }
+
   .hero__title {
     font-size: 3rem;
   }
@@ -426,12 +507,5 @@ section h2 {
 @media screen and (max-width: 560px) {
   .hero__title {
     font-size: 2rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .container-space {
-    padding-left: 8vw;
-    padding-right: 8vw;
   }
 }

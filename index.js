@@ -74,3 +74,18 @@ const addHeaderBackground = (e) => {
 }
 
 window.addEventListener('scroll', addHeaderBackground)
+
+const menuButton = document.querySelector('.menu')
+const sideNav = document.querySelector('.side-nav')
+const body = document.querySelector('body')
+const overlay = document.getElementById('overlay')
+const sideNavLink = document.querySelector('.side-nav__links')
+
+const toggleMenu = (e) => {
+  sideNav.classList.toggle('active')
+  body.classList.toggle('disabled')
+  overlay.classList.toggle('active')
+}
+
+menuButton.addEventListener('click', toggleMenu)
+sideNavLink.addEventListener('click', toggleMenu)
