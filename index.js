@@ -56,8 +56,6 @@ window.addEventListener('mousemove', (e) => {
   e.preventDefault()
   mouse.x = e.clientX
   mouse.y = e.clientY
-
-  console.log(mouse.x, mouse.y)
 })
 
 createPoints()

@@ -76,6 +76,10 @@ a {
   color: white;
 }
 
+main section {
+  padding-top: 70px;
+}
+
 section h2 {
   color: var(--color-text-terminal-green);
   font-size: 2rem;
@@ -201,10 +205,6 @@ section h2 {
   opacity: 0.7;
 }
 
-.experience {
-  padding: 30px;
-}
-
 .experience__item {
   display: flex;
   align-items: center;
@@ -259,16 +259,32 @@ section h2 {
   font-size: 0.800em;
 }
 
-.about {
-  padding-top: 70px;
-}
-
 .about__container {
   background-color: rgb(256, 256, 256, 0.1);
   border-radius: 5px;
   box-shadow: 5px 5px 5px var(--color-box-shadow);
   padding: 5px;
   width: 100%;
+}
+
+.about__icons {
+  display: flex;
+  gap: 8px;
+}
+
+.about__icon {
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255);
+  color: black;
+  padding: 5px;
+  gap: 2px;
+  transition: 0.2s;
+}
+
+.about__icon:hover {
+  scale: calc(1.05);
 }
 
 .about__certification-list {
@@ -319,6 +335,10 @@ section h2 {
   margin-right: 10px;
 }
 
+.about__certification figure {
+  margin: 0;
+}
+
 .project__item.leetcode {
   margin-top: 50px;
 }
@@ -337,10 +357,6 @@ section h2 {
   color: var(--color-text-terminal-green);
   border-radius: 2px;
   padding: 5px;
-}
-
-.projects h2 {
-  padding-top: 70px;
 }
 
 .project__item-links a:hover {
@@ -366,6 +382,35 @@ section h2 {
 
 .project__item-description a:hover::after {
   width: 100%;
+}
+
+.contact {
+  margin-bottom: 50px;
+}
+
+.contact__container {
+  width: 100%;
+  background-color: rgb(256, 256, 256, 0.1);
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px var(--color-box-shadow);
+  padding: 20px 0 50px 0;
+}
+
+.about__icon.email {
+  width: fit-content;
+  margin-top: 30px;
+}
+
+.footer {
+  text-align: center;
+  border-top: 1px solid var(--color-tep-bar-gray);
+  padding: 20px 0;
+}
+
+.footer p {
+  margin: 0;
+  padding: 8px;
+  font-size: 0.875rem;
 }
 
 @media screen and (max-width: 768px) {
