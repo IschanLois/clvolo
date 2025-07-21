@@ -1,0 +1,26 @@
+{
+  "name": "clvolo",
+  "version": "1.0.0",
+  "description": "clvolo portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IschanLois/clvolo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/IschanLois/clvolo/issues"
+  },
+  "homepage": "https://github.com/IschanLois/clvolo#readme",
+  "devDependencies": {
+    "webpack": "^5.100.2",
+    "webpack-cli": "^6.0.1"
+  }
+}
