@@ -90,13 +90,18 @@ const openMenu = (e) => {
   overlay.classList.add('active')
 }
 
-const closeMenu = () => {
+const closeMenu = (e) => {
+  if (sideNav.contains(e.target) && !sideNavLinks.contains(e.target)) {
+    return
+  }
+
   sideNav.classList.remove('active')
   body.classList.remove('disabled')
   overlay.classList.remove('active')
 
   sideNavLinks.removeEventListener('click', closeMenu)
   window.removeEventListener('click', closeMenu)
+  window.removeEventListener('touchend', closeMenu)
 }
 
 menuButton.addEventListener('click', (e) => {
@@ -106,4 +111,5 @@ menuButton.addEventListener('click', (e) => {
 
   sideNavLinks.addEventListener('click', closeMenu)
   window.addEventListener('click', closeMenu)
+  window.addEventListener('touchend', closeMenu)
 })

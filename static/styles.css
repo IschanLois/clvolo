@@ -467,7 +467,7 @@ ul li {
 
 @media screen and (max-width: 768px) {
   body.disabled {
-    overflow-y: hidden;
+    overflow-y: hidden; 
   }
 
   .side-nav.active {
